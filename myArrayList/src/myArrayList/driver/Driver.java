@@ -9,21 +9,26 @@ import myArrayList.test.*;
 import myArrayList.MyArrayList;
 import myArrayList.util.Results;
 
-public class driver {
+public class Driver {
 
 	public static void main(String[] args) 
 	{
-		File path=null;
+				File path=null;
 		//=new File("C:\\Binghamton\\DesignPattern\\Assignment1\\src\\test");;
 		
+		// Taking the input from the user to enter the name of the file
 		Scanner in = new Scanner(System.in);
 		String filename ;
-		System.out.println("Ener the Name of the file: ");
+		System.out.println("Ener the Name of the Input file: ");
 		filename = in.nextLine();
 		
 		MyArrayList myArrayListInstance = new MyArrayList();
-		String FileName = "output.txt";
-		Results ResultsInstance = new Results(FileName);
+		
+		Scanner sc = new Scanner(System.in);
+		String output ;
+		System.out.println("Ener the Name of the output file: ");
+		output = sc.nextLine();
+		Results ResultsInstance = new Results(output);
 
 		MyArrayListTest myArrayListTestInstance = new MyArrayListTest();
 		try 
@@ -37,7 +42,7 @@ public class driver {
 		}
 		try 
 		{
-			PrintWriter pw = new PrintWriter(FileName);
+			PrintWriter pw = new PrintWriter(output);
 			//myArrayListInstance.sum();
 			pw.close();
 		} 
@@ -50,7 +55,5 @@ public class driver {
 		//myArrayListInstance.sum();
 		
 		myArrayListTestInstance.testMe(myArrayListInstance, ResultsInstance);
-
 	}
-
 }
