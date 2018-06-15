@@ -10,7 +10,7 @@ import myArrayList.MyArrayList;
 public class FileProcessor {
 	public void readLine(MyArrayList myArrayListInstance, String filename) throws IOException
     {
-		// Here we are reading the lines of file one by one
+		// Here we are reading the lines of file one by onein
         FileReader fileReader = new FileReader(filename);
         BufferedReader bufferReader = new BufferedReader(fileReader);
         String readLine = null;
