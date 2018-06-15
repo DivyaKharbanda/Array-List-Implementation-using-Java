@@ -17,17 +17,17 @@ public class Driver {
 		//=new File("C:\\Binghamton\\DesignPattern\\Assignment1\\src\\test");;
 		
 		// Taking the input from the user to enter the name of the file
-		Scanner in = new Scanner(System.in);
-		String filename ;
-		System.out.println("Ener the Name of the Input file: ");
-		filename = in.nextLine();
-		
+		//Scanner in = new Scanner(System.in);
+		String filename = args[0] ;
+//		System.out.println("Ener the Name of the Input file: ");
+//		filename = in.nextLine();
+//		
 		MyArrayList myArrayListInstance = new MyArrayList();
 		
-		Scanner sc = new Scanner(System.in);
-		String output ;
-		System.out.println("Ener the Name of the output file: ");
-		output = sc.nextLine();
+		//Scanner sc = new Scanner(System.in);
+		String output = args[1] ;
+		//System.out.println("Ener the Name of the output file: ");
+		//output = sc.nextLine();
 		Results ResultsInstance = new Results(output);
 
 		MyArrayListTest myArrayListTestInstance = new MyArrayListTest();

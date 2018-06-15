@@ -36,6 +36,7 @@ public class Results implements FileDisplayInterface, StdoutDisplayInterface
 		MyArrayList myArrayList = new MyArrayList();
 		try {
 			PrintWriter pr = new PrintWriter(new FileWriter(name1, true));
+			
 			writeToFile(output);
 			//myArrayList.sum();
 			pr.write(testName);
